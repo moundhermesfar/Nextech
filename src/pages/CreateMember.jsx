@@ -4,6 +4,7 @@ import Spinner from "../components/Spinner";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useSnackbar } from "notistack";
+import logo from "../assets/nextech.png";
 
 const CreateMember = () => {
   const [name, setName] = useState("");
@@ -22,6 +23,20 @@ const CreateMember = () => {
   };
 
   const handleSaveMember = () => {
+    if (
+      !name ||
+      !familyName ||
+      !yearOfStudying ||
+      !email ||
+      !motivation ||
+      !skills
+    ) {
+      enqueueSnackbar(
+        "All fields are required. Please fill in all the information.",
+        { variant: "error" }
+      );
+      return;
+    }
     if (!isEmailValid(email)) {
       enqueueSnackbar("Invalid email address", { variant: "error" });
       return;
@@ -44,7 +59,7 @@ const CreateMember = () => {
       })
       .catch((error) => {
         setLoading(false);
-        alert("An error happened. Please try again");
+        // alert("An error happened. Please try again");
         enqueueSnackbar("Error", { variant: "error" });
         console.log(error.stack);
       });
@@ -57,7 +72,7 @@ const CreateMember = () => {
       <BackButton />
       <header className="text-center mb-8">
         <img
-          src="https://drive.google.com/uc?id=1QEy81Lh8ljlv9Sq3cdVR7JFSrap-YlqA"
+          src={logo}
           alt="Club Logo"
           className="mx-auto mb-4"
           style={{ maxWidth: "150px" }}
