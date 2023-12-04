@@ -28,7 +28,7 @@ const CreateMember = () => {
     };
     setLoading(true);
     axios
-      .post("https://nextech-api.onrender.com", data)
+      .post("https://nextech-api.onrender.com/members", data)
       .then(() => {
         setLoading(false);
         enqueueSnackbar("Member created successfully", { variant: "success" });
