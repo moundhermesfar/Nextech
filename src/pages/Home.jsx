@@ -24,7 +24,7 @@ const Home = () => {
     <div className="p-4">
       <header className="text-center mb-8">
         <img
-          src="https://drive.google.com/uc?id=1QEy81Lh8ljlv9Sq3cdVR7JFSrap-YlqA"
+          src="./nextch.png"
           alt="Club Logo"
           className="mx-auto mb-4"
           style={{ maxWidth: "150px" }}
