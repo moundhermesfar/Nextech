@@ -36,7 +36,7 @@ const CreateMember = () => {
       })
       .catch((error) => {
         setLoading(false);
-        alert("An error happened. Please check console");
+        alert("An error happened. Please try again");
         enqueueSnackbar("Error", { variant: "error" });
         console.log(error.stackt);
       });
