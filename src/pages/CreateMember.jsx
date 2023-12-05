@@ -24,6 +24,19 @@ const CreateMember = () => {
     return emailRegex.test(email);
   };
 
+  useEffect(() => {
+    const handleBeforeUnload = (event) => {
+      event.preventDefault();
+      window.location.href = "/";
+    };
+
+    window.addEventListener("beforeunload", handleBeforeUnload);
+
+    return () => {
+      window.removeEventListener("beforeunload", handleBeforeUnload);
+    };
+  }, []);
+
   const handleSaveMember = () => {
     if (
       !name ||
