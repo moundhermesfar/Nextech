@@ -38,7 +38,7 @@ const Home = () => {
       <div className="flex flex-col items-center">
         <Link to="/members/create">
           <button className="bg-red-500 text-white px-4 py-2 rounded border border-red-500 hover:text-red-500 hover:bg-white hover:border-red-500">
-            Register Now
+            Join Us
           </button>
         </Link>
         <h1 className="text-3xl my-8">Meet Our Members</h1>
