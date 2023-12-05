@@ -9,10 +9,12 @@ import logo from "../assets/nextech.png";
 const CreateMember = () => {
   const [name, setName] = useState("");
   const [familyName, setFamilyName] = useState("");
+  const [faculty, setFaculty] = useState("");
   const [yearOfStudying, setYearOfStudying] = useState("L1");
   const [email, setEmail] = useState("");
   const [motivation, setMotivation] = useState("");
   const [skills, setSkills] = useState("");
+  const [comments, setComments] = useState("");
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
   const { enqueueSnackbar } = useSnackbar();
@@ -26,6 +28,7 @@ const CreateMember = () => {
     if (
       !name ||
       !familyName ||
+      !faculty ||
       !yearOfStudying ||
       !email ||
       !motivation ||
@@ -44,10 +47,12 @@ const CreateMember = () => {
     const data = {
       name,
       familyName,
+      faculty,
       yearOfStudying,
       email,
       motivation,
       skills,
+      comments,
     };
     setLoading(true);
     axios
@@ -65,7 +70,13 @@ const CreateMember = () => {
       });
   };
 
-  const yearOfStudyingOptions = ["ING1", "ING2", "L1", "L2", "L3", "M1", "M2"];
+  const yearOfStudyingOptions = [
+    "First year",
+    "Second year",
+    "Third year",
+    "Forth year",
+    "Fifth year",
+  ];
 
   return (
     <div className="p-4" style={{ backgroundColor: "black" }}>
@@ -101,6 +112,15 @@ const CreateMember = () => {
           />
         </div>
         <div className="my-4">
+          <label className="text-xl mr-4 text-white">Which Faculty ?</label>
+          <input
+            type="text"
+            value={faculty}
+            onChange={(e) => setFaculty(e.target.value)}
+            className="border-2 border-red-500 px-4 py-2 w-full text-black"
+          />
+        </div>
+        <div className="my-4">
           <label className="text-xl mr-4 text-white">Year of Studying</label>
           <select
             value={yearOfStudying}
@@ -126,17 +146,29 @@ const CreateMember = () => {
         <div className="my-4">
           <label className="text-xl mr-4 text-white">Motivation</label>
           <textarea
+            placeholder="Why do you wanna join us ?"
             value={motivation}
             onChange={(e) => setMotivation(e.target.value)}
             className="border-2 border-red-500 px-4 py-2 w-full h-30 text-black"
           />
         </div>
-
         <div className="my-4">
           <label className="text-xl mr-4 text-white">Skills</label>
           <textarea
+            placeholder="E.g., Web Development, Graphic Design, Project Management..."
             value={skills}
             onChange={(e) => setSkills(e.target.value)}
+            className="border-2 border-red-500 px-4 py-2 w-full h-30 text-black"
+          />
+        </div>
+        <div className="my-4">
+          <label className="text-xl mr-4 text-white">
+            Any thing you wanna add ?
+          </label>
+          <textarea
+            placeholder="Feel free to express yourself, (this field isn't required"
+            value={comments}
+            onChange={(e) => setComments(e.target.value)}
             className="border-2 border-red-500 px-4 py-2 w-full h-30 text-black"
           />
         </div>
