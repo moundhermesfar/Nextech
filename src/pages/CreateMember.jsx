@@ -74,7 +74,7 @@ const CreateMember = () => {
       .post("https://nextech-api.onrender.com/members", data)
       .then(() => {
         setLoading(false);
-        enqueueSnackbar("Member created successfully", { variant: "success" });
+        enqueueSnackbar("Member register successfully", { variant: "success" });
         navigate("/success");
       })
       .catch((error) => {
