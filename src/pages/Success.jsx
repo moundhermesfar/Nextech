@@ -1,11 +1,6 @@
 import React, { useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faFacebook,
-  faInstagram,
-  faDiscord,
-} from "@fortawesome/free-brands-svg-icons";
+
 const SuccessPage = () => {
   const navigate = useNavigate();
 
@@ -43,7 +38,8 @@ const SuccessPage = () => {
           Back to Home
         </Link>
       </div>
-    xi</div>
+      xi
+    </div>
   );
 };
 
