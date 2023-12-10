@@ -43,50 +43,6 @@ const SuccessPage = () => {
           Back to Home
         </Link>
       </div>
-      <footer className="mt-8 p-6 bg-gray-800 flex flex-col items-center text-white">
-        <p className="text-lg font-semibold mb-4">Be a part of our community</p>
-        <div className="flex justify-around w-full">
-          <a
-            href="https://www.facebook.com/profile.php?id=61553474487971"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ marginRight: "1rem" }}
-          >
-            <FontAwesomeIcon
-              icon={faFacebook}
-              size="2x"
-              color="white"
-              className="hover:text-red-500"
-            />
-          </a>
-          <a
-            href="https://www.instagram.com/nextech.squad/"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ marginRight: "1rem" }}
-          >
-            <FontAwesomeIcon
-              icon={faInstagram}
-              size="2x"
-              color="white"
-              className="hover:text-red-500"
-            />
-          </a>
-          <a
-            href="https://discord.gg/pp9KnpcJEv"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FontAwesomeIcon
-              icon={faDiscord}
-              size="2x"
-              color="white"
-              className="hover:text-red-500"
-            />
-          </a>
-        </div>
-        <p className="mt-4">Made by M. MOUNDHER</p>
-      </footer>
     </div>
   );
 };
