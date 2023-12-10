@@ -5,7 +5,12 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useSnackbar } from "notistack";
 import logo from "../assets/nextech.png";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faFacebook,
+  faInstagram,
+  faDiscord,
+} from "@fortawesome/free-brands-svg-icons";
 const CreateMember = () => {
   const [name, setName] = useState("");
   const [familyName, setFamilyName] = useState("");
