@@ -37,13 +37,13 @@ const MemberTable = ({ members }) => {
             </td>
             <td className="border border-slate-700 rounded-md text-center max-md:hidden">
               {member.yearOfStudying}
-            </td>{" "}
+            </td>
             <td className="border border-slate-700 rounded-md text-center max-md:hidden">
               {member.email}
-            </td>{" "}
+            </td>
             <td className="border border-slate-700 rounded-md text-center max-md:hidden">
               {member.motivation}
-            </td>{" "}
+            </td>
             <td className="border border-slate-700 rounded-md text-center max-md:hidden">
               {member.skills}
             </td>
