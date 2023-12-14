@@ -40,20 +40,28 @@ const AdminPage = () => {
       <div className="flex justify-between items-center">
         <h1 className="text-3xl my-8">Members List</h1>
         {!authenticated && (
-          <div className="flex items-center space-x-2">
-            <input
-              type="password"
-              placeholder="Enter password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              className="border px-3 py-1 rounded-md focus:outline-none focus:ring focus:border-red-500"
-            />
-            <button
-              onClick={handlePasswordSubmit}
-              className="bg-red-500 text-black px-4 py-1 rounded-md hover:bg-red-600 focus:outline-none focus:ring focus:border-red-300"
+          <div className="flex items-center">
+            <form
+              className="flex items-center space-x-2"
+              onSubmit={(e) => {
+                e.preventDefault();
+                handlePasswordSubmit();
+              }}
             >
-              Submit
-            </button>
+              <input
+                type="password"
+                placeholder="Enter password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                className="border px-3 py-1 rounded-md focus:outline-none focus:ring focus:border-blue-300"
+              />
+              <button
+                type="submit"
+                className="bg-blue-500 text-white px-4 py-1 rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300"
+              >
+                Submit
+              </button>
+            </form>
           </div>
         )}
       </div>
