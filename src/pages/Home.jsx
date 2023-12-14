@@ -24,12 +24,14 @@ const Home = () => {
   return (
     <div className="p-4">
       <header className="text-center mb-8">
-        <img
-          src={logo}
-          alt="Club Logo"
-          className="mx-auto mb-4"
-          style={{ maxWidth: "150px" }}
-        />
+        <Link to="/admin">
+          <img
+            src={logo}
+            alt="Club Logo"
+            className="mx-auto mb-4"
+            style={{ maxWidth: "150px" }}
+          />
+        </Link>
         <h1 className="text-4xl font-bold">Welcome to Our Club</h1>
         <p className="text-gray-400 mt-2">
           Discover and connect with our amazing community!
