@@ -53,7 +53,7 @@ const AdminPage = () => {
                 placeholder="Enter password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="border px-3 py-1 rounded-md focus:outline-none focus:ring focus:border-blue-300"
+                className="border px-3 py-1 rounded-md focus:outline-none focus:ring focus:border-blue-300 text-black"
               />
               <button
                 type="submit"
