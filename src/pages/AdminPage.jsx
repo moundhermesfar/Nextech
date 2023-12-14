@@ -3,7 +3,7 @@ import axios from "axios";
 import Spinner from "../components/Spinner";
 import MembersTable from "../components/MembersTable";
 
-const Home = () => {
+const AdminPage = () => {
   const [members, setMembers] = useState([]);
   const [loading, setLoading] = useState(false);
 
@@ -31,4 +31,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default AdminPage;
